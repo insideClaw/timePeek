@@ -6,9 +6,8 @@ from time import sleep
 
 def printHour(color):
 	sys.stdout.write(">>> ")
-	sys.stdout.write(colored(dt.datetime.now().hour,color))
-	sys.stdout.write(":")
-	print(colored(dt.datetime.now().minute,color))
+	now = dt.datetime.now()
+	print(colored("%0.2d:%0.2d" % (now.hour, now.minute), color))
 
 def clearScreen():
 	'''Clears screen'''
